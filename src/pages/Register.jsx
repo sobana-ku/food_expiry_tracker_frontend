@@ -16,7 +16,7 @@ function Register() {
     const formData = { username, email, password };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const response = await axios.post("https://food-expiry-tracker-backend-6jtk.onrender.com/api/auth/register", formData);
       if (response.status === 201) {
         setSuccess(response.data.message);
         setTimeout(() => {

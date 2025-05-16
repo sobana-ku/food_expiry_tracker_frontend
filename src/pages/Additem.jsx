@@ -22,7 +22,7 @@ const Additem = () => {
         category,
       };
 
-      const response = await axios.post('http://localhost:5000/api/items/add', newItem);
+      const response = await axios.post('https://food-expiry-tracker-backend-6jtk.onrender.com/api/items/add', newItem);
 
       alert(response.data.message || "Item added successfully");
 

@@ -33,7 +33,7 @@ function FoodInventory() {
 
   const fetchItems = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/items/items');
+      const response = await axios.get('https://food-expiry-tracker-backend-6jtk.onrender.com/api/items/items');
       if (Array.isArray(response.data)) {
         setItems(response.data);
       } else {
@@ -46,7 +46,7 @@ function FoodInventory() {
 
   const searchItemsByName = async (name, category) => {
     try {
-      let url = `http://localhost:5000/api/items/search?name=${name}`;
+      let url = `https://food-expiry-tracker-backend-6jtk.onrender.com/api/items/search?name=${name}`;
       if (category) {
         url += `&category=${category}`;
       }
@@ -68,7 +68,7 @@ function FoodInventory() {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this expired item?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/items/item/${id}`);
+        await axios.delete(`https://food-expiry-tracker-backend-6jtk.onrender.com/api/items/item/${id}`);
         fetchItems();
       } catch (error) {
         console.error('Error deleting item:', error);

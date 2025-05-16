@@ -11,7 +11,7 @@ function FoodDetails() {
   useEffect(() => {
     const fetchItem = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/items/item/${id}`);
+        const response = await axios.get(`https://food-expiry-tracker-backend-6jtk.onrender.com/api/items/item/${id}`);
         setItem(response.data);
       } catch (error) {
         console.error('Error fetching item details:', error);
@@ -23,7 +23,7 @@ function FoodDetails() {
   const handleDelete = async () => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/items/item/${id}`);
+        await axios.delete(`https://food-expiry-tracker-backend-6jtk.onrender.com/api/items/item/${id}`);
         navigate('/inventory');  
       } catch (error) {
         console.error('Error deleting item:', error);
