@@ -1,0 +1,117 @@
+body.light-theme {
+  background-color: #f5f5f5;
+  color: #111010;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-image: linear-gradient(to right,red, darkviolet);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f8f0f0;
+}
+
+
+/* New wrapper to combine logo and heading horizontally */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Logo image */
+.logo-section img {
+  height: 100px;
+  width: 100px;
+  border-radius:200%;
+  border: 3px solid #fff;
+  flex-direction: column;
+  align-items: center;
+  }
+
+/* Heading next to logo */
+.navbar-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #6edc6e;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 5px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  margin-left: 10px;
+  background-color: white;
+  color: blue;
+  border: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #171616;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:5px;
+  }
+
+  .navbar-heading {
+    font-size: 20px;
+  }
+
+  .theme-toggle {
+    margin-top: 10px;
+  }
+}
